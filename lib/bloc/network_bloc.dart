@@ -28,7 +28,7 @@ class NetworkBloc extends Bloc<NetworkEvent, NetworkState> {
       }
       
     }catch(e){
-      emit(Error());
+      emit(Error(e: e.toString()));
     }
   }
 

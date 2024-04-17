@@ -14,5 +14,8 @@ class DataFetched extends NetworkState {
 
 class Loading extends NetworkState {}
 
-class Error extends NetworkState {}
+class Error extends NetworkState {
+  final String e;
+  Error({required this.e});
+}
 

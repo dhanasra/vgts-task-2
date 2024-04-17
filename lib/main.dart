@@ -69,6 +69,15 @@ class App extends StatelessWidget {
                               Text(state.legs)
                             ],
                           ),
+                        ) 
+                        : state is Error
+                        ? Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Error", style:  Theme.of(context).textTheme.titleMedium),
+                            const SizedBox(height: 8,),
+                            Text(state.e)
+                          ],
                         ) : const SizedBox.shrink(),
                     ),
                   ),
